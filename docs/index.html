@@ -43,25 +43,44 @@
           <li class="final__item">
             <img class="final__img" src="img/money1.svg" alt="money" />
             <b class="final__number">erwr</b>
+            <div class="final__note" id="final__bed">
+              В этом мало смысла — такие накопления «съедает» инфляция
+            </div>
             <p class="final__description">
               если откладывать под матрас
-              <button class="final__interrogatory">?</button>
+              <button class="final__interrogatory" id="final__bed-button">
+                ?
+              </button>
             </p>
           </li>
           <li class="final__item">
             <img class="final__img" src="img/money2.svg" alt="money" />
             <b class="final__number">erwr</b>
+            <div class="final__note" id="final__deposit">
+              Ставки по вкладам различны в разных банках и зависят от многих
+              факторов, в частности, от ключевой ставки Центрального банка РФ¹.
+            </div>
             <p class="final__description">
               если откладывать на депозит
-              <button class="final__interrogatory">?</button>
+              <button class="final__interrogatory" id="final__deposit-button">
+                ?
+              </button>
             </p>
           </li>
           <li class="final__item">
             <img class="final__img" src="img/money3.svg" alt="money" />
             <b class="final__number">erwr</b>
+            <div class="final__note" id="final__bank">
+              Вы становитесь инвестором набора компаний, который определяют
+              профессиональные управляющие. Они решают, когда покупать и
+              продавать ценные бумаги, чтобы обеспечить инвестиционный доход.
+              Купить или продать паи фонда можно в любой момент².
+            </div>
             <p class="final__description">
               если инвестировать в ПИФ «Альфа-Капитала»
-              <button class="final__interrogatory">?</button>
+              <button class="final__interrogatory" id="final__bank-button">
+                ?
+              </button>
             </p>
           </li>
         </ul>
@@ -71,7 +90,8 @@
         <div class="average__display">
           <div class="average__answer">
             <div class="average__answer-circle">
-              <b class="average__answer-number">0099</b>
+              <img class="average__answer-img" src="img/money15.svg" />
+              <b class="average__answer-number">~ 15 240 ₽</b>
             </div>
             <p class="average__answer-description">
               в среднем откладывают читатели vc.ru
@@ -125,7 +145,26 @@
           </div>
         </div>
         <button class="average__button">
-          А как в среднем у читателей vc.ru?
+          <span class="average__button-text"
+            >А как в среднем у читателей vc.ru?</span
+          >
+          <svg
+            class="average__button-arrow"
+            width="16"
+            height="7"
+            viewBox="0 0 16 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L7.55598 5.95238L14.0892 1"
+              stroke="#FE4D4A"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </button>
       </div>
 

@@ -5,7 +5,7 @@
 }
 
 .final__wrapper {
-    width: 90%;
+    width: 900px;
     max-width: 1000px;
     margin: auto;
 }
@@ -58,7 +58,54 @@
     margin-top: 8px;
 }
 
+.final__note {
+    display: none;
+    background: @color-red;
+    border-radius: 5px;
+    width: 290px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    position: absolute;
+    color: white;
+    font-weight: 500;
+    padding-left: 20px; 
+    padding-right: 20px;
+    margin-left: -58px;
+    box-shadow: 0px 9px 10px rgba(254, 77, 74, 0.1);
+    &:after  {
+        content: '';
+        position: absolute;
+        margin-top: 27px;
+        transform: rotate(45deg);
+        width: 7px;
+        height: 7px;
+        background: @color-red;
+    }
+}
+
+#final__bed {
+    margin-top: -45px;
+    &:after {
+        margin-left: -117px;
+    }
+}
+
+#final__deposit {
+    margin-top:  -82px;
+    &:after {
+        margin-left: -117px;
+    }
+}
+
+#final__bank {
+    margin-top: -157px;
+    &:after {
+        margin-left: -4px;
+    }
+}
+
 .final__interrogatory {
+    cursor: pointer;
     border: none;
     outline: none;
     width: 20px;
