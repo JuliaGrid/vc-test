@@ -1,21 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>vc test</title>
-    <link rel="stylesheet" href="app/style.css">
-</head>
+    <link rel="stylesheet" href="app/style.css" />
+  </head>
 
-<body>
-    <h2>hello</h2>
-</body>
+  <body>
+    <section class="greeting">
+      <div class="greeting__wrapper">
+        <h2 class="greeting__question">
+          Сколько денег вы откладываете в месяц?
+        </h2>
+        <p class="greeting__answer">
+          Ответьте и узнаете, сколько копят другие.
+        </p>
+        <div class="greeting__range">
+          <b class="greeting__number">0 ₽</b>
+          <input
+            class="greeting__input"
+            type="range"
+            min="1"
+            max="50000"
+            value="20000"
+          />
+          <b class="greeting__number">50 000 ₽</b>
+        </div>
+      </div>
+    </section>
 
+    <section class="final">
+      <div class="final__wrapper">
+        <h2 class="final__conclusion">
+          Вы откладываете 8 888 ₽ в месяц. За три года вы бы заработали:
+        </h2>
+        <ul class="final__list">
+          <li class="final__item">
+            <img class="final__img" src="img/money1.svg" alt="money" />
+            <b class="final__number">erwr</b>
+            <p class="final__description">
+              если откладывать под матрас
+              <button class="final__interrogatory">?</button>
+            </p>
+          </li>
+          <li class="final__item">
+            <img class="final__img" src="img/money2.svg" alt="money" />
+            <b class="final__number">erwr</b>
+            <p class="final__description">
+              если откладывать на депозит
+              <button class="final__interrogatory">?</button>
+            </p>
+          </li>
+          <li class="final__item">
+            <img class="final__img" src="img/money3.svg" alt="money" />
+            <b class="final__number">erwr</b>
+            <p class="final__description">
+              если инвестировать в ПИФ «Альфа-Капитала»
+              <button class="final__interrogatory">?</button>
+            </p>
+          </li>
+        </ul>
+      </div>
 
-<script src="dist/bundle.js"></script>
-<script src="js/vendor.min.js"></script>
-<script src="js/scripts.min.js"></script>
+      <div class="final__average average">
+        <div class="average__display">
+          <div class="average__answer">
+            <div class="average__answer-circle">
+              <b class="average__answer-number">0099</b>
+            </div>
+            <p class="average__answer-description">
+              в среднем откладывают читатели vc.ru
+            </p>
+          </div>
+          <div class="average__explanation-wrapper">
+            <div class="average__explanation">
+              <div class="average__explanation-circle">
+                <svg
+                  id="average__explanation-50"
+                  width="78"
+                  height="156"
+                  viewBox="0 0 78 156"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 141C34.7939 141 63 112.794 63 78C63 43.2061 34.7939 15 0 15"
+                    stroke="#FE4D4A"
+                    stroke-width="30"
+                  />
+                </svg>
+              </div>
+              <b class="average__explanation-percent">50%</b>
+              <p class="average__explanation-description">
+                читателей откладывают больше 1000 ₽ в месяц
+              </p>
+            </div>
+            <div class="average__explanation">
+              <div class="average__explanation-circle">
+                <svg
+                  id="average__explanation-7"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 15C10.4134 15 20.2367 17.5265 28.8904 22"
+                    stroke="#FE4D4A"
+                    stroke-width="30"
+                  />
+                </svg>
+              </div>
+              <b class="average__explanation-percent">7%</b>
+              <p class="average__explanation-description">
+                читателей откладывают больше 10 000 ₽ в месяц
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="average__button">
+          А как в среднем у читателей vc.ru?
+        </button>
+      </div>
 
-</body>
+      <div class="final__investments investments">
+        <strong class="investments__question">Как начать инвестировать?</strong>
+        <a
+          class="investments__answer"
+          href="https://alfabank.ru/make-money/investments/"
+          target="_blank"
+          >Узнать</a
+        >
+      </div>
+    </section>
+  </body>
+
+  <script src="dist/bundle.js"></script>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/scripts.min.js"></script>
 </html>
