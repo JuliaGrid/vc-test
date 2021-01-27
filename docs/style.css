@@ -28,10 +28,14 @@
 }
 .greeting__number {
   font-weight: 500;
-  width: 90px;
+  white-space: nowrap;
+}
+.greeting__number:first-child {
+  padding-right: 10px;
 }
 .greeting__number:last-child {
   text-align: right;
+  padding-left: 10px;
 }
 .greeting__input {
   -webkit-appearance: none;
@@ -61,6 +65,12 @@
   border-radius: 50%;
   border: 8px solid #fe4d4a;
   cursor: pointer;
+}
+@media (max-width: 900px) {
+  .greeting__wrapper {
+    width: 300px;
+    margin-left: -150px;
+  }
 }
 .final {
   min-height: 100vh;
@@ -169,6 +179,45 @@
   font-family: inherit;
   color: #FE4D4A;
 }
+@media (max-width: 900px) {
+  .final__conclusion {
+    width: 300px;
+    margin: auto;
+  }
+  .final__wrapper {
+    width: 320px;
+  }
+  .final__list {
+    flex-direction: column;
+    width: 220px;
+    margin: auto;
+    text-align: center;
+  }
+  .final__item {
+    margin: auto;
+    margin-top: 30px;
+  }
+  .final__note {
+    width: 260px;
+    margin-left: -78px;
+  }
+  #final__bed:after {
+    margin-left: -82px;
+  }
+  #final__deposit {
+    margin-top: -102px;
+  }
+  #final__deposit:after {
+    margin-left: -1px;
+  }
+  #final__bank {
+    margin-left: -43px;
+    margin-top: -176px;
+  }
+  #final__bank:after {
+    margin-left: 9px;
+  }
+}
 .average {
   background: #FEEBEF;
 }
@@ -254,6 +303,7 @@
   outline: none;
   width: 330px;
   margin: auto;
+  padding: 0;
   padding-top: 24px;
   padding-bottom: 24px;
   background: #FEEBEF;
@@ -264,6 +314,20 @@
 }
 .average__button-text {
   margin-right: 10px;
+}
+@media (max-width: 900px) {
+  .average__explanation-wrapper {
+    width: 320px;
+    margin: auto;
+    flex-direction: column;
+  }
+  .average__explanation {
+    margin: auto;
+    margin-top: 30px;
+  }
+  .average__button {
+    width: 300px;
+  }
 }
 .investments {
   display: flex;
@@ -287,6 +351,11 @@
   text-align: center;
   color: white;
   text-decoration: none;
+}
+@media (max-width: 900px) {
+  .investments {
+    width: 300px;
+  }
 }
 @font-face {
   font-family: 'Roboto';

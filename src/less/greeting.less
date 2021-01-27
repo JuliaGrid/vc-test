@@ -34,11 +34,16 @@
 
 .greeting__number {
     font-weight: 500;
-    width: 90px;
+    white-space:  nowrap;
+}
+
+.greeting__number:first-child {
+    padding-right: 10px;
 }
 
 .greeting__number:last-child {
     text-align: right;
+    padding-left: 10px;
 }
 
 .greeting__input {
@@ -72,3 +77,10 @@
     border: 8px solid #fe4d4a;
     cursor: pointer;
 }
+
+@media (max-width: 900px) {
+    .greeting__wrapper {
+      width: 300px;
+      margin-left: -150px;
+    }
+  }

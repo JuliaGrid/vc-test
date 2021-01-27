@@ -98,6 +98,7 @@
     outline: none;
     width: 330px;
     margin: auto;
+    padding: 0;
     padding-top: 24px;
     padding-bottom: 24px;
     background: @color-dark-pink;
@@ -110,3 +111,20 @@
 .average__button-text {
     margin-right: 10px;
 }
+
+@media (max-width: 900px) {
+    .average__explanation-wrapper {
+      width: 320px;
+      margin: auto;
+      flex-direction: column;
+    }
+
+    .average__explanation {
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .average__button {
+        width: 300px;
+    }
+  }

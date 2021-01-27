@@ -118,3 +118,53 @@
     font-family: inherit;
     color: @color-red;
 }
+
+
+@media (max-width: 900px) {
+    .final__conclusion {
+        width: 300px;
+        margin: auto;
+    }
+
+    .final__wrapper {
+        width: 320px;
+    }
+
+    .final__list {
+      flex-direction: column;
+      width: 220px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .final__item {
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .final__note {
+        width: 260px;
+        margin-left: -78px
+    }
+    
+    #final__bed {
+        &:after {
+            margin-left: -82px;
+        }
+    }
+
+    #final__deposit {
+        margin-top: -102px;
+        &:after {
+            margin-left: -1px;
+        }
+    }
+
+    #final__bank {
+        margin-left: -43px;
+        margin-top: -176px;
+        &:after {
+            margin-left: 9px;
+        }
+    }
+  }
