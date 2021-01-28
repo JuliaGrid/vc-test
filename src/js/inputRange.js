@@ -105,6 +105,6 @@ slider.onmouseup = function () {
   final.scrollIntoView({ behavior: "smooth" });
 };
 
-slider.ontouchend = function () {
+slider.touchend = function () {
   final.scrollIntoView({ behavior: "smooth" });
 };
