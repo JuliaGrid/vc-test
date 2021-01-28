@@ -212,6 +212,10 @@
 #final__bank:after {
   margin-left: -4px;
 }
+.final__href {
+  color: white;
+  text-decoration: none;
+}
 .final__interrogatory {
   cursor: pointer;
   border: none;
