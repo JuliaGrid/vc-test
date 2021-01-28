@@ -201,15 +201,17 @@
   margin-left: -117px;
 }
 #final__deposit {
-  margin-top: -82px;
+  margin-top: -89px;
 }
 #final__deposit:after {
+  margin-top: 33px;
   margin-left: -117px;
 }
 #final__bank {
-  margin-top: -157px;
+  margin-top: -163px;
 }
 #final__bank:after {
+  margin-top: 33px;
   margin-left: -4px;
 }
 .final__href {
@@ -253,20 +255,21 @@
     margin-left: -78px;
   }
   #final__bed:after {
-    margin-left: -82px;
+    margin-left: -78px;
   }
   #final__deposit {
-    margin-top: -102px;
+    margin-left: -71px;
+    margin-top: -106px;
   }
   #final__deposit:after {
-    margin-left: -1px;
+    margin-left: 0px;
   }
   #final__bank {
     margin-left: -43px;
-    margin-top: -176px;
+    margin-top: -181px;
   }
   #final__bank:after {
-    margin-left: 9px;
+    margin-left: 10px;
   }
 }
 .average {
