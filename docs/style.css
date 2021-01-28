@@ -219,6 +219,8 @@
   text-decoration: none;
 }
 .final__interrogatory {
+  -webkit-text-size-adjust: none;
+  -webkit-appearance: none;
   cursor: pointer;
   border: none;
   outline: none;
