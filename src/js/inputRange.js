@@ -104,3 +104,7 @@ slider.oninput = function () {
 slider.onmouseup = function () {
   final.scrollIntoView({ behavior: "smooth" });
 };
+
+slider.ontouchend = function () {
+  final.scrollIntoView({ behavior: "smooth" });
+};
