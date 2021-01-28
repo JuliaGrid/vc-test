@@ -8,6 +8,7 @@ let bankValue = document.querySelector("#final__bank-value");
 let bedImg = document.querySelector("#final__bed-img");
 let depositImg = document.querySelector("#final__deposit-img");
 let bankImg = document.querySelector("#final__bank-img");
+let final = document.querySelector(".final");
 const radius = 25;
 
 function setPointerPosition() {
@@ -98,4 +99,8 @@ slider.oninput = function () {
   writeCoins(bankImg, bankResult, biggestResult);
   setPointerPosition();
   setRedInputPosition();
+};
+
+slider.onmouseup = function () {
+  final.scrollIntoView({ behavior: "smooth" });
 };

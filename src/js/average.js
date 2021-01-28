@@ -2,6 +2,7 @@ let averageButton = document.querySelector(".average__button");
 let averageContent = document.querySelector(".average__display");
 let averageText = document.querySelector(".average__button-text");
 let averageArrow = document.querySelector(".average__button-arrow");
+let average = document.querySelector(".average");
 
 function openCloseMenu() {
   if (
@@ -18,4 +19,7 @@ function openCloseMenu() {
   }
 }
 
-averageButton.onclick = openCloseMenu;
+averageButton.onclick = function () {
+  openCloseMenu();
+  average.scrollIntoView({ behavior: "smooth" });
+};
