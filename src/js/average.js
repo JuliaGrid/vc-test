@@ -5,21 +5,20 @@ let averageArrow = document.querySelector(".average__button-arrow");
 let average = document.querySelector(".average");
 
 function openCloseMenu() {
-  if (
-    window.getComputedStyle(averageContent).getPropertyValue("display") ==
-    "none"
-  ) {
-    averageContent.style.display = "block";
+  if (!averageContent.classList.contains("average__display--display")) {
     averageText.textContent = "Свернуть";
-    averageArrow.style.transform = "rotate(180deg)";
   } else {
-    averageContent.style.display = "none";
     averageText.textContent = "А как в среднем у читателей vc.ru?";
-    averageArrow.style.transform = "rotate(0deg)";
   }
+  averageArrow.classList.toggle("average__button-arrow--open");
+  averageContent.classList.toggle("average__display--display");
 }
 
-averageButton.onclick = function () {
-  openCloseMenu();
-  average.scrollIntoView({ behavior: "smooth" });
-};
+averageButton.addEventListener(
+  "click",
+  function () {
+    openCloseMenu();
+    average.scrollIntoView({ behavior: "smooth" });
+  },
+  false
+);

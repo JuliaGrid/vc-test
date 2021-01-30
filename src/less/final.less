@@ -63,7 +63,7 @@
 }
 
 .final__note {
-    display: none;
+    display: block;
     background: @color-red;
     border-radius: 5px;
     width: 290px;
@@ -87,10 +87,14 @@
     }
 }
 
+.final__note--close {
+    display: none;
+}
+
 #final__bed {
     margin-top: -45px;
     &:after {
-        margin-left: -117px;
+        margin-left: -120px;
     }
 }
 
@@ -132,6 +136,11 @@
     text-align: center;
     font-family: inherit;
     color: @color-red;
+}
+
+.final__interrogatory--open {
+    background: @color-red;
+    color: white;
 }
 
 

@@ -171,7 +171,7 @@
   margin-top: 8px;
 }
 .final__note {
-  display: none;
+  display: block;
   background: #FE4D4A;
   border-radius: 5px;
   width: 290px;
@@ -194,11 +194,14 @@
   height: 7px;
   background: #FE4D4A;
 }
+.final__note--close {
+  display: none;
+}
 #final__bed {
   margin-top: -45px;
 }
 #final__bed:after {
-  margin-left: -117px;
+  margin-left: -120px;
 }
 #final__deposit {
   margin-top: -89px;
@@ -235,6 +238,10 @@
   text-align: center;
   font-family: inherit;
   color: #FE4D4A;
+}
+.final__interrogatory--open {
+  background: #FE4D4A;
+  color: white;
 }
 @media (max-width: 900px) {
   .final__conclusion {
@@ -283,6 +290,9 @@
   padding-top: 20px;
   padding-bottom: 20px;
   display: none;
+}
+.average__display--display {
+  display: block;
 }
 .average__answer {
   width: 300px;
@@ -372,6 +382,9 @@
 }
 .average__button-text {
   margin-right: 10px;
+}
+.average__button-arrow--open {
+  transform: rotate(180deg);
 }
 @media (max-width: 900px) {
   .average__explanation-wrapper {

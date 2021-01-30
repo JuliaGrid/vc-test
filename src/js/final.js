@@ -5,85 +5,48 @@ let bedNote = document.querySelector("#final__bed");
 let depositNote = document.querySelector("#final__deposit");
 let bankNote = document.querySelector("#final__bank");
 
-function closeBed() {
-  bedNote.style.display = "none";
-  bedButton.style.background = "#FEEBEF";
-  bedButton.style.color = "#FE4D4A";
+function toggleBed() {
+  bedNote.classList.toggle("final__note--close");
+  bedButton.classList.toggle("final__interrogatory--open");
 }
 
-function closeDeposit() {
-  depositNote.style.display = "none";
-  depositButton.style.background = "#FEEBEF";
-  depositButton.style.color = "#FE4D4A";
+function toggleDeposit() {
+  depositNote.classList.toggle("final__note--close");
+  depositButton.classList.toggle("final__interrogatory--open");
 }
 
-function closeBank() {
-  bankNote.style.display = "none";
-  bankButton.style.background = "#FEEBEF";
-  bankButton.style.color = "#FE4D4A";
+function toggleBank() {
+  bankNote.classList.toggle("final__note--close");
+  bankButton.classList.toggle("final__interrogatory--open");
 }
 
 function openCloseBedNote() {
-  if (window.getComputedStyle(bedNote).getPropertyValue("display") == "none") {
-    if (
-      window.getComputedStyle(depositNote).getPropertyValue("display") ==
-      "block"
-    ) {
-      closeDeposit();
-    } else if (
-      window.getComputedStyle(bankNote).getPropertyValue("display") == "block"
-    ) {
-      closeBank();
-    }
-    bedNote.style.display = "block";
-    bedButton.style.background = "#FE4D4A";
-    bedButton.style.color = "#FFFFFF";
-  } else {
-    closeBed();
+  if (!depositNote.classList.contains("final__note--close")) {
+    toggleDeposit();
+  } else if (!bankNote.classList.contains("final__note--close")) {
+    toggleBank();
   }
+  toggleBed();
 }
 
 function openCloseDepositNote() {
-  if (
-    window.getComputedStyle(depositNote).getPropertyValue("display") == "none"
-  ) {
-    if (
-      window.getComputedStyle(bedNote).getPropertyValue("display") == "block"
-    ) {
-      closeBed();
-    } else if (
-      window.getComputedStyle(bankNote).getPropertyValue("display") == "block"
-    ) {
-      closeBank();
-    }
-    depositNote.style.display = "block";
-    depositButton.style.background = "#FE4D4A";
-    depositButton.style.color = "#FFFFFF";
-  } else {
-    closeDeposit();
+  if (!bedNote.classList.contains("final__note--close")) {
+    toggleBed();
+  } else if (!bankNote.classList.contains("final__note--close")) {
+    toggleBank();
   }
+  toggleDeposit();
 }
 
 function openCloseBankNote() {
-  if (window.getComputedStyle(bankNote).getPropertyValue("display") == "none") {
-    if (
-      window.getComputedStyle(bedNote).getPropertyValue("display") == "block"
-    ) {
-      closeBed();
-    } else if (
-      window.getComputedStyle(depositNote).getPropertyValue("display") ==
-      "block"
-    ) {
-      closeDeposit();
-    }
-    bankNote.style.display = "block";
-    bankButton.style.background = "#FE4D4A";
-    bankButton.style.color = "#FFFFFF";
-  } else {
-    closeBank();
+  if (!bedNote.classList.contains("final__note--close")) {
+    toggleBed();
+  } else if (!depositNote.classList.contains("final__note--close")) {
+    toggleDeposit();
   }
+  toggleBank();
 }
 
-bedButton.onclick = openCloseBedNote;
-depositButton.onclick = openCloseDepositNote;
-bankButton.onclick = openCloseBankNote;
+bedButton.addEventListener("click", openCloseBedNote, false);
+depositButton.addEventListener("click", openCloseDepositNote, false);
+bankButton.addEventListener("click", openCloseBankNote, false);

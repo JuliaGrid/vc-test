@@ -10,22 +10,22 @@ let depositImg = document.querySelector("#final__deposit-img");
 let bankImg = document.querySelector("#final__bank-img");
 let final = document.querySelector(".final");
 const radius = 25;
-
-function setPointerPosition() {
-  const dxPixels =
+function countPixels() {
+  return (
     radius / 2 +
     ((slider.valueAsNumber - parseInt(slider.min)) *
       (slider.scrollWidth - radius)) /
-      (parseInt(slider.max) - parseInt(slider.min));
+      (parseInt(slider.max) - parseInt(slider.min))
+  );
+}
+
+function setPointerPosition() {
+  const dxPixels = countPixels();
   pointer.style.left = dxPixels - pointer.offsetWidth / 2 + "px";
 }
 
 function setRedInputPosition() {
-  const dxPixels =
-    radius / 2 +
-    ((slider.valueAsNumber - parseInt(slider.min)) *
-      (slider.scrollWidth - radius)) /
-      (parseInt(slider.max) - parseInt(slider.min));
+  const dxPixels = countPixels();
   inputRed.style.width = dxPixels + "px";
 }
 
@@ -84,26 +84,34 @@ function writeMoney(money) {
   return String(money).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
 }
 
-slider.oninput = function () {
-  pointer.innerHTML = writeMoney(slider.value) + " " + "₽";
-  finalSum.innerHTML = String(writeMoney(slider.value));
-  bedResult = slider.value * 12 * 3;
-  depositResult = deposit(slider.value);
-  bankResult = investment(slider.value);
-  biggestResult = investment(50000);
-  bedValue.innerHTML = String(writeMoney(bedResult));
-  depositValue.innerHTML = String(writeMoney(depositResult));
-  bankValue.innerHTML = String(writeMoney(bankResult));
-  writeCoins(bedImg, bedResult, biggestResult);
-  writeCoins(depositImg, depositResult, biggestResult);
-  writeCoins(bankImg, bankResult, biggestResult);
-  setPointerPosition();
-  setRedInputPosition();
-};
+slider.addEventListener(
+  "input",
+  function () {
+    pointer.innerHTML = writeMoney(slider.value) + " " + "₽";
+    finalSum.innerHTML = String(writeMoney(slider.value));
+    bedResult = slider.value * 12 * 3;
+    depositResult = deposit(slider.value);
+    bankResult = investment(slider.value);
+    biggestResult = investment(50000);
+    bedValue.innerHTML = String(writeMoney(bedResult));
+    depositValue.innerHTML = String(writeMoney(depositResult));
+    bankValue.innerHTML = String(writeMoney(bankResult));
+    writeCoins(bedImg, bedResult, biggestResult);
+    writeCoins(depositImg, depositResult, biggestResult);
+    writeCoins(bankImg, bankResult, biggestResult);
+    setPointerPosition();
+    setRedInputPosition();
+  },
+  false
+);
 
-slider.onmouseup = function () {
-  final.scrollIntoView({ behavior: "smooth" });
-};
+slider.addEventListener(
+  "mouseup",
+  function () {
+    final.scrollIntoView({ behavior: "smooth" });
+  },
+  false
+);
 
 slider.addEventListener(
   "touchend",
